@@ -1,0 +1,44 @@
+{
+  "name": "benchwarmer",
+  "version": "1.0.0",
+  "description": "A lightweight benchmarking tool",
+  "author": "Stephen Belanger <admin@stephenbelanger.com> (http://stephenbelanger.com/)",
+  "license": "MIT",
+  "type": "commonjs",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "require": "./dist/index.js",
+    "import": "./dist/index.mjs",
+    "default": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "lint": "eslint src",
+    "prepublishOnly": "npm run build",
+    "pretest": "npm run build",
+    "test": "tap dist/**.test.js"
+  },
+  "keywords": [
+    "bench",
+    "benchmark"
+  ],
+  "homepage": "https://github.com/qard/benchwarmer#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qard/benchwarmer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qard/benchwarmer/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.12",
+    "@types/tap": "^15.0.7",
+    "@typescript-eslint/eslint-plugin": "^5.40.0",
+    "@typescript-eslint/parser": "^5.40.0",
+    "eslint": "^8.57.0",
+    "tap": "^21.0.0",
+    "typescript": "^5.5.4"
+  }
+}
